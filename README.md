@@ -1,21 +1,25 @@
-# 🎮 Connect Four – Solo Console Game with AI (Node.js)
+#🎮 Puissance 4 – Jeu solo en console avec IA (Node.js)
 
-## 🧠 Project Overview
+---
 
-This project is a solo version of Connect Four, played in the terminal against an AI opponent.
-The AI uses the Minimax algorithm with alpha–beta pruning to analyze the board and make strategic decisions.
+## 🧠 Présentation du projet
 
-Key features:
+Ce projet est une version solo de Puissance 4, jouée dans le terminal contre un adversaire IA.  
+L’IA utilise l’algorithme Minimax avec élagage alpha–bêta pour analyser le plateau et prendre des décisions stratégiques.
 
-🟨 AI opponent (no multiplayer mode)
+Fonctionnalités principales :
 
-🎨 Colored symbols for better readability in the console
+🟨 Adversaire IA (pas de mode multijoueur)
 
-✅ Automatic detection of wins, losses, and draws
+🎨 Symboles colorés pour une meilleure lisibilité dans la console
 
-⚡ Efficient AI with a depth-limited search for smooth gameplay
+✅ Détection automatique des victoires, défaites et matchs nuls
 
-## 📂 Project Structure
+⚡ IA efficace avec une profondeur de recherche limitée pour un gameplay fluide
+
+---
+
+## 📂 Structure du projet
 
 ```
 .
@@ -27,49 +31,53 @@ Key features:
 └── package-lock.json   # Auto-generated lockfile
 
 ```
-## 📦 Requirements
+## 📦 Prérequis
 
-Node.js v18+ → Download
+- Node.js v18+ → [Télécharger](https://nodejs.org/)  
+- npm (inclus avec Node.js)  
 
-npm (comes with Node.js)
+Dépendances :
 
-Dependencies:
+- `prompts` – pour les invites interactives en CLI
 
-prompts– interactive CLI prompts
+---
 
-# 🚀 Installation & Usage
+# 🚀 Installation & Utilisation
 
-### 1️⃣ Clone the repository:
+### 1️⃣ Cloner le dépôt :
+
 ```
 git clone https://github.com/your-username/connect-four-ai.git
 cd connect-four-ai
 ```
 
-### 2️⃣ Install dependencies:
+### 2️⃣ Installer les dépendances :
 ```
 npm install
 ```
 
-### 3️⃣ Start the game:
+### 3️⃣ Lancer le Jeu:
 ```
 node index.js
 ```
 
 # ⚙️ Configuration
 
-At the top of index.js, you can change some settings:
-```
-// Decide who plays first
-const AI_PLAY_FIRST = true; // true = AI starts, false = player starts
+En haut du fichier 'index.js', vous pouvez modifier certains paramètres :
+```javascript
+// Déterminer qui joue en premier
+const AI_PLAY_FIRST = true; // true = l'IA commence, false = le joueur commence
 
-// Customize symbols and colors
+// Personnaliser les symboles et les couleurs
 const AI_SYMBOLE = changeColor("O", "yellow");
 const PLAYER_SYMBOLE = changeColor("X", "red");
+
 ```
 
 ## 🎲 Gameplay
 
-The board starts empty:
+Le plateau commence vide :
+
 ```
 _ _ _ _ _ _ _
 _ _ _ _ _ _ _
@@ -80,36 +88,44 @@ _ _ _ _ _ _ _
 1 2 3 4 5 6 7
 
 ```
-Player’s turn → choose a column (1–7)
+Tour du joueur → choisissez une colonne (1–7)
 
-AI’s turn → instantly responds with its move
+Tour de l’IA → répond immédiatement avec son coup
 
-The game ends when either:
+Le jeu se termine lorsque l’une des conditions suivantes est remplie :
+
 
 ```
-🏆 A player aligns 4 pieces in a row (horizontal, vertical, or diagonal)
+🏆 Un joueur aligne 4 jetons d’affilée (horizontal, vertical ou diagonal)
 
-🤝 The board is full (draw)
+🤝 Le plateau est rempli (match nul)
 
-🧠 AI Algorithm
+---
 
-The AI evaluates moves using Minimax with alpha–beta pruning (depth = 3).
+## 🧠 Algorithme de l’IA
+
+L’IA évalue les coups en utilisant Minimax avec élagage alpha–bêta (profondeur = 3).
+
 ```
-Evaluation Function:
+## Fonction d’évaluation :
+```text
++3 → L’IA contrôle la colonne centrale
+
++100 → L’IA a 4 jetons d’affilée (état gagnant)
+
++5 → L’IA a 3 jetons d’affilée avec une case vide
+
++2 → L’IA a 2 jetons d’affilée avec deux cases vides
+
+-4 → Le joueur a 3 jetons d’affilée (menace)
+
 ```
-+3 → AI controls center column
+Cela permet à l’IA de jouer à la fois de manière offensive et défensive, en équilibrant les stratégies d’attaque et de blocage.
 
-+100 → AI has 4 in a row (winning state)
+---
 
-+5 → AI has 3 in a row with one empty
+## 📜 Exemple de boucle principale
 
-+2 → AI has 2 in a row with two empties
-
--4 → Player has 3 in a row (threat)
-```
-This makes the AI play offensively and defensively, balancing attack and block strategies.
-
-## 📜 Main Loop Example
 ```
 const main = async () => {
   console.clear();
@@ -142,16 +158,16 @@ const main = async () => {
 
 main();
 ```
+# 🚀 Améliorations futures
 
-# 🚀 Future Improvements
+### 🔧 Niveaux de difficulté (profondeur de l’IA ajustable)
 
-### 🔧 Difficulty levels (adjustable AI depth)
+### 🏅 Système de score (suivi des victoires/défaites)
 
-### 🏅 Scoring system (track wins/losses)
+### 🖥️ Version avec interface web
 
-### 🖥️ Web-based UI version
+### 🎨 Amélioration des visuels en console
 
-### 🎨 Improved console visuals
 
 
 
