@@ -39,18 +39,18 @@ prompts– interactive CLI prompts
 
 # 🚀 Installation & Usage
 
-## 1️⃣ Clone the repository:
+### 1️⃣ Clone the repository:
 ```
 git clone https://github.com/your-username/connect-four-ai.git
 cd connect-four-ai
 ```
 
-## 2️⃣ Install dependencies:
+### 2️⃣ Install dependencies:
 ```
 npm install
 ```
 
-## 3️⃣ Start the game:
+### 3️⃣ Start the game:
 ```
 node index.js
 ```
@@ -145,13 +145,13 @@ main();
 
 # 🚀 Future Improvements
 
-## 🔧 Difficulty levels (adjustable AI depth)
+### 🔧 Difficulty levels (adjustable AI depth)
 
-## 🏅 Scoring system (track wins/losses)
+### 🏅 Scoring system (track wins/losses)
 
-## 🖥️ Web-based UI version
+### 🖥️ Web-based UI version
 
-## 🎨 Improved console visuals
+### 🎨 Improved console visuals
 
 
 
