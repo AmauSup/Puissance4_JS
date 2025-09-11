@@ -55,7 +55,7 @@ npm install
 node index.js
 ```
 
-## ⚙️ Configuration
+# ⚙️ Configuration
 
 At the top of index.js, you can change some settings:
 ```
@@ -86,6 +86,7 @@ AI’s turn → instantly responds with its move
 
 The game ends when either:
 
+```
 🏆 A player aligns 4 pieces in a row (horizontal, vertical, or diagonal)
 
 🤝 The board is full (draw)
@@ -93,7 +94,7 @@ The game ends when either:
 🧠 AI Algorithm
 
 The AI evaluates moves using Minimax with alpha–beta pruning (depth = 3).
-
+```
 Evaluation Function:
 ```
 +3 → AI controls center column
