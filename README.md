@@ -1,4 +1,4 @@
-#🎮 Puissance 4 – Jeu solo en console avec IA (Node.js)
+# 🎮 Puissance 4 – Jeu solo en console avec IA (Node.js)
 
 ---
 
