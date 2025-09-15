@@ -159,14 +159,13 @@ const main = async () => {
 main();
 ```
 # 🚀 Améliorations futures
+    🔧 Niveaux de difficulté (profondeur de l’IA ajustable)
 
-### 🔧 Niveaux de difficulté (profondeur de l’IA ajustable)
+    🏅 Système de score (suivi des victoires/défaites)
 
-### 🏅 Système de score (suivi des victoires/défaites)
+    🖥️ Version avec interface web
 
-### 🖥️ Version avec interface web
-
-### 🎨 Amélioration des visuels en console
+    🎨 Amélioration des visuels en console
 
 
 
